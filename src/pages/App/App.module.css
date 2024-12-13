@@ -1,0 +1,24 @@
+.container {
+  width: 100%;
+  max-width: 1268px;
+  padding-top: 54px;
+  margin: auto;
+}
+
+.content {
+  min-height: calc(100vh - 54px);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: 164px;
+}
+
+.contentBox {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    margin-left: 0;
+  }
+}

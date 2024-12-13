@@ -1,0 +1,48 @@
+.input {
+  display: none;
+}
+
+.uploadBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.upload {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.filename {
+  color: var(--theme-white-op80);
+}
+
+.resetForm {
+  margin-top: 40px;
+}
+
+.reset {
+  cursor: pointer;
+  width: 200px;
+  outline: none;
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 6px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: all 0.2s ease-out;
+  padding: 12px 0;
+}
+
+@media screen and (min-width: 1280px) {
+  .upload:hover {
+    color: var(--primary);
+    text-decoration: underline ;
+  }
+
+  .reset:hover {
+    box-shadow: inset 0 0 0 3px var(--theme-white-op80);
+  }
+}

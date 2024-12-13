@@ -1,0 +1,147 @@
+.box {
+  position: fixed;
+  height: calc(100vh - 54px);
+  width: 164px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 2px solid var(--primary);
+  background-color: var(--theme-raisin-black);
+  overflow-y: auto;
+  z-index: 10;
+  padding: 20px 0;
+}
+
+.box::-webkit-scrollbar {
+  width: 12px;
+}
+
+.box::-webkit-scrollbar-track {
+  background: var(--theme-raisin-black);
+}
+
+.box::-webkit-scrollbar-thumb {
+  border: 4px solid var(--theme-raisin-black);
+  border-radius: 6px;
+  background: var(--theme-white);
+}
+
+.nav {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  padding: 10px 8px;
+}
+
+.link::before {
+  position: absolute;
+  inset: 0 0 auto auto;
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: var(--black-op50);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  z-index: -1;
+}
+
+.linkSVG {
+  width: 16px;
+}
+
+.linkSVG path {
+  fill: var(--theme-white-op80);
+}
+
+.linkSVGActive path {
+  fill: var(--theme-white);
+}
+
+.link span {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+}
+
+.active {
+  background-color: var(--primary);
+}
+
+.active span {
+  color: var(--theme-white);
+  font-weight: 700;
+}
+
+.logout {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background-color: var(--crimson);
+  box-shadow: 0 0 0 var(--theme-raisin-black) inset;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: box-shadow 0.25s ease-out;
+  padding: 8px;
+  margin: 0 12px;
+}
+
+.free {
+  height: 24px;
+}
+
+@media screen and (min-width: 1280px) {
+  .link:hover::before {
+    transform: translateX(0);
+  }
+
+  .logout:hover {
+    box-shadow: 0 0 8px var(--theme-raisin-black) inset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 100%;
+    border-right: none;
+    transform: translateY(-100vh);
+    transition: all 0.4s ease-out;
+    z-index: 9;
+  }
+
+  .opened {
+    transform: translateY(0);
+  }
+
+  .link {
+    justify-content: center;
+    border-radius: unset;
+  }
+
+  .linkSVG {
+    width: 32px;
+  }
+
+  .link span {
+    font-size: 2rem;
+    padding: 12px 0;
+  }
+
+  .logout {
+    font-size: 1.25rem;
+    padding: 8px 20px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,79 @@
+.info {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.process {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.loaderWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes slideOutLoader {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.hiddenLoader {
+  animation: 0.25s ease-in forwards slideOutLoader;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  fill: var(--white);
+  animation: 1.5s linear infinite rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform: translateY(0) rotate(0);
+  }
+  to {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+.tick {
+  width: 100%;
+  height: 100%;
+}
+
+.tick path {
+  stroke: var(--primary);
+  filter: drop-shadow(0 0 4px var(--black));
+}
+
+@keyframes slideInTick {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.visibleTick {
+  animation: 0.25s ease-out 0.25s forwards slideInTick;
+}
+
+.error {
+  color: var(--crimson);
+  font-size: 1.25rem;
+}

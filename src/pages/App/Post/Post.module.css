@@ -1,0 +1,191 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-bottom: 1px solid var(--theme-white-op80);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.headerInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  font-size: 0.875rem;
+}
+
+.headerInfoItem {
+  display: flex;
+  gap: 8px;
+}
+
+.headerInfoLabel {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+}
+
+.headerInfoValue {
+  color: var(--theme-white);
+  font-weight: 600;
+}
+.statusActive,
+.statusInacative {
+  text-transform: uppercase;
+}
+
+.statusActive {
+  color: var(--royal-green);
+}
+
+.statusInacative {
+  color: var(--royal-red);
+}
+
+.content {
+  line-height: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--theme-white-op80);
+  padding-bottom: 20px;
+}
+
+.category {
+  border-radius: 6px;
+  background-color: var(--theme-category-card-background);
+  box-shadow: 0 3px 6px var(--theme-category-card-background);
+  transition: box-shadow 0.2s ease-out;
+  padding: 6px 12px;
+}
+
+.categoryName {
+  font-weight: 700;
+  transition: color 0.2s ease-out;
+}
+
+.reactions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  border-bottom: 1px solid var(--theme-white-op80);
+  padding: 20px 0;
+}
+
+.save {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.saveSVG,
+.saveSVGActive {
+  width: 40px;
+  display: block;
+}
+
+.saveSVG path {
+  fill: var(--theme-white-op80);
+  transition: fill 0.2s linear;
+}
+
+.saveSVGActive path {
+  fill: var(--gold);
+  transition: fill 0.2s linear;
+}
+
+.authorBox {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--theme-white-op80);
+  border-radius: 6px;
+  box-shadow: 0 4px 4px -4px var(--theme-white);
+  transition: all 0.2s ease-out;
+  padding: 8px;
+}
+
+.authorLogin {
+}
+
+.authorAvatarBox {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.manage {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.update,
+.delete {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 20px;
+  outline: none;
+  background-color: transparent;
+  padding: 8px 20px;
+}
+
+.delete {
+  border: 1px solid var(--royal-red);
+  color: var(--royal-red);
+}
+
+.commentForm {
+  margin-bottom: 40px;
+}
+
+.commentFormBtn {
+  width: 280px;
+  margin: auto;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (min-width: 1280px) {
+  .category:hover {
+    box-shadow: 0 0 6px var(--theme-category-card-background);
+  }
+
+  .categoryName:hover {
+    color: var(--primary);
+  }
+
+  .saveSVG:hover path {
+    fill: var(--theme-white);
+  }
+
+  .author:hover {
+    border-bottom: 1px solid var(--primary);
+    box-shadow: none;
+  }
+}

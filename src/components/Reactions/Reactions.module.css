@@ -1,0 +1,54 @@
+.box {
+  display: flex;
+  gap: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.value {
+  font-size: 1.125rem;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.heartSVG,
+.heartSVGActive,
+.dislikeSVG,
+.dislikeSVGActive {
+  width: 40px;
+  display: block;
+}
+
+.heartSVG path,
+.dislikeSVG path{
+  fill: var(--theme-white-op80);
+  transition: fill 0.2s linear;
+}
+
+.heartSVGActive path {
+  fill: var(--royal-green);
+}
+
+.dislikeSVGActive path {
+  fill: var(--royal-red);
+}
+
+.authorBox {
+
+}
+
+@media screen and (min-width: 1280px) {
+  .heartSVG:hover path,
+  .dislikeSVG:hover path{
+    fill: var(--theme-white);
+  }
+}

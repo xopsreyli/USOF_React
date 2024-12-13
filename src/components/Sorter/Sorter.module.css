@@ -1,0 +1,96 @@
+.box {
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+
+.header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--theme-white-op80);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.titleSVG {
+  width: 20px;
+}
+
+.titleSVG path {
+  stroke: var(--theme-white);
+}
+
+.titleText {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.openedSVG {
+  width: 40px;
+}
+
+.openedSVG path {
+  stroke: var(--theme-white);
+  transition: all 0.2s ease-out;
+}
+
+.content {
+  max-height: 0;
+  transition: max-height 0.2s linear;
+}
+
+.contentShown {
+  max-height: 56px;
+}
+
+.margin {
+  height: 20px;
+}
+
+.sorters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+
+.item {
+  width: calc((100% - 120px) / 4);
+}
+
+@media screen and (min-width: 1280px) {
+  .header:hover .openedSVG path {
+    stroke: var(--primary);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .item {
+    width: calc((100% - 80px) / 3);
+  }
+}
+
+@media screen and (max-width: 828px) {
+  .contentShown {
+    max-height: 112px;
+  }
+
+  .item {
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .contentShown {
+    max-height: 168px;
+  }
+
+  .item {
+    width: 100%;
+  }
+}

@@ -1,0 +1,139 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.titleSVG {
+  width: 40px;
+}
+
+.title path {
+  fill: var(--theme-white);
+}
+
+.titleText {
+  text-transform: capitalize;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryInput {
+  width: 400px;
+}
+
+.searchCategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.searchCategory {
+  cursor: pointer;
+  width: calc((100% - 40px) / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.searchCategoryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchCategoryTitle,
+.searchCategoryNumberOfPosts {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.searchCategoryNumberOfPosts {
+  color: var(--primary);
+}
+
+.searchCategoryDescription {
+  height: calc(4 * 1rem);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  color: var(--theme-white-op80);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.pickedCategoriesBox {
+}
+
+.pickedCategoriesLabel {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+
+.pickedCategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.categoryBox {
+  width: calc((100% - 100px) / 6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--theme-category-card-background);
+  box-shadow: 0 0 4px var(--theme-category-card-background);
+  border-radius: 6px;
+  padding: 2px 2px 2px 8px;
+}
+
+.categoryName {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.closeSVG {
+  cursor: pointer;
+  display: block;
+  width: 28px;
+}
+
+.closeSVG path {
+  stroke: var(--theme-white-op80);
+  transition: stroke 0.2s ease-out;
+}
+
+.error {
+  text-align: center;
+  color: var(--crimson);
+  font-size: 0.875rem;
+}
+
+.btnBox {
+  width: 200px;
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 1280px) {
+  .closeSVG:hover path {
+    stroke: var(--crimson);
+  }
+}

@@ -1,0 +1,127 @@
+.themeBox,
+.schemaBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.label  {
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.themeToggler {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border-radius: 24px;
+  background-color: var(--theme-toggler-background);
+  padding: 12px 16px;
+}
+
+.themeTogglerThumb {
+  position: absolute;
+  inset: auto auto auto 6px;
+  height: 36px;
+  width: 92px;
+  border-radius: 18px;
+  background-color: var(--theme-raisin-black);
+  z-index: 1;
+  transition: transform 0.25s ease-out;
+}
+
+.themeTogglerThumbLight {
+  transform: translateX(100%);
+}
+
+.themeMode {
+  width: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.moon,
+.sun {
+  width: 24px;
+}
+
+.moon path {
+  stroke: var(--theme-raisin-black);
+}
+
+.moonPicked path {
+  stroke: var(--capri);
+}
+
+.sun path {
+  fill: var(--theme-raisin-black);
+}
+
+.sunPicked path {
+  fill: var(--sun);
+}
+
+.themeModeName {
+  color: var(--theme-raisin-black);
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.themeModeNamePicked {
+  color: var(--theme-white);
+}
+
+.schemaBox {
+  padding-bottom: 6px;
+}
+
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.colorInput {
+  display: none;
+}
+
+.color {
+  cursor: pointer;
+  position: relative;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.pickedColor {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 52px;
+  aspect-ratio: 1;
+  display: block;
+  border: 2px solid;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0);
+  transition: opacity 0.2s ease-out;
+}
+
+.colorInput:checked + .color .pickedColor {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .schemaBox {
+
+  }
+}

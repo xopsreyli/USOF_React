@@ -1,0 +1,17 @@
+.link {
+  background-color: var(--royal-green);
+  border: 2px solid var(--forest-green);
+  border-radius: 6px;
+  text-transform: capitalize;
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: all 0.2s ease-out;
+  padding: 12px;
+}
+
+@media screen and (min-width: 1280px) {
+  .link:hover {
+    border-color: var(--royal-green);
+  }
+}

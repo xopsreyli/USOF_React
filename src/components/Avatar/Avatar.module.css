@@ -1,0 +1,15 @@
+.avatar {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.avatarSVG {
+  width: 100%;
+  display: block;
+}
+
+.avatarSVG path {
+  stroke: var(--theme-white);
+}

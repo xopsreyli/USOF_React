@@ -1,0 +1,45 @@
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.titleSVG {
+  width: 40px;
+}
+
+.titleSVG path {
+  fill: var(--theme-white);
+}
+
+.titleText {
+  text-transform: capitalize;
+}
+
+.introduction {
+  text-align: justify;
+  text-indent: 20px;
+  color: var(--theme-white-op80);
+  line-height: 1.6rem;
+  border-bottom: 1px solid var(--theme-white-op80);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.postsTitle {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    justify-content: center;
+  }
+
+  .introduction {
+    text-align: center;
+    text-indent: unset;
+  }
+}

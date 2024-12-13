@@ -1,0 +1,12 @@
+.icon,
+.text {
+  fill: var(--primary);
+  transition: all 0.25s linear;
+}
+
+@media screen and (min-width: 1280px) {
+  .logo:hover .icon,
+  .logo:hover .text {
+    filter: drop-shadow(0 0 1px var(--primary));
+  }
+}

@@ -1,0 +1,112 @@
+.box {
+  cursor: pointer;
+  position: relative;
+  width: calc((100% - 60px) / 4);
+  background-color: var(--theme-category-card-background);
+  border-radius: 20px;
+  padding: 40px 20px 20px;
+}
+
+.box::before,
+.box::after {
+  position: absolute;
+  inset: -2px;
+  content: '';
+  display: block;
+  background: conic-gradient(
+      from var(--angle),
+      var(--primary) 20%,
+      var(--theme-category-card-background) 20% 50%,
+      var(--primary) 50% 70%,
+      var(--theme-category-card-background) 70% 100%
+  );
+  border-radius: 22px;
+  animation: running-border 5s linear infinite;
+  z-index: -1;
+}
+
+.box::after {
+  filter: blur(4px);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes running-border {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  height: calc(4 * 1rem);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4;
+  text-align: center;
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin-bottom: 16px;
+}
+
+.postsAmountBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+}
+
+.postsAmountText {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+}
+
+.postsAmount {
+  color: var(--primary);
+}
+
+@media screen and (min-width: 1280px) {
+  .box:hover::before,
+  .box:hover::after {
+    background: conic-gradient(
+        from var(--angle),
+        var(--theme-white) 20%,
+        var(--theme-category-card-background) 20% 50%,
+        var(--theme-white) 50% 70%,
+        var(--theme-category-card-background) 70% 100%
+    );
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .box {
+    width: calc((100% - 40px) / 3);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .box {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    width: 100%;
+  }
+}

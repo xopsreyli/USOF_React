@@ -1,0 +1,136 @@
+.box {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-right: 48px;
+}
+
+.avatarCard {
+  margin-bottom: 16px;
+}
+
+.avatarBox {
+  position: relative;
+  display: block;
+  width: 80px;
+  aspect-ratio: 1;
+  border: 2px solid var(--theme-white);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+  margin: auto;
+}
+
+.avatarBox::before {
+  content: '+';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--theme-white-op80);
+  text-align: center;
+  align-content: center;
+  color: var(--theme-raisin-black);
+  font-size: 4rem;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  height: 40px;
+  border-radius: 6px;
+}
+
+.cardSVG {
+  position: absolute;
+  left:4px;
+  width: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  z-index: 1;
+}
+
+.cardSVG path {
+  stroke: var(--primary);
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--theme-raisin-black);
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 6px;
+  transition: all 0.3s ease-out;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.label {
+  text-transform: capitalize;
+  font-size: 0.875rem;
+}
+
+.contentBorder {
+  width: 1px;
+  height: 100%;
+  background-color: var(--theme-white-op80);
+  transition: all 0.3s ease-out;
+}
+
+.value {
+  font-size: 1.125rem;
+}
+
+.unsetedValue {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+}
+
+.delete {
+  cursor: pointer;
+  align-self: flex-start;
+  background-color: transparent;
+  border: 1px solid var(--royal-red);
+  border-radius: 6px;
+  outline: none;
+  text-transform: uppercase;
+  color: var(--royal-red);
+  font-size: 1.25rem;
+  font-weight: 700;
+  transition: all 0.2s ease-out;
+  padding: 8px 20px;
+}
+
+@media screen and (min-width: 1280px) {
+  .avatarBox:hover {
+    border-color: var(--primary);
+  }
+
+  .avatarBox:hover:before {
+    opacity: 1;
+  }
+
+  .card:hover .cardSVG {
+    opacity: 1;
+  }
+
+  .card:hover .content {
+    border-color: var(--primary);
+    transform: translateX(48px);
+  }
+
+  .card:hover .content .contentBorder {
+    background-color: var(--primary);
+  }
+
+  .delete:hover {
+    background-color: var(--royal-red);
+    color: var(--theme-raisin-black);
+  }
+}

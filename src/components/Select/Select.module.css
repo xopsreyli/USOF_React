@@ -1,0 +1,94 @@
+.box {
+  cursor: pointer;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--theme-white);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 10px var(--theme-white);
+  padding: 8px;
+}
+
+.name {
+  text-transform: capitalize;
+  font-size: 0.875rem;
+}
+
+.svg {
+  width: 18px;
+  rotate: 0deg;
+  transition: rotate 0.2s ease-out;
+}
+
+.svg g {
+  fill: var(--theme-white);
+}
+
+.svgActive {
+  rotate: -180deg;
+}
+
+.values {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  max-height: 0;
+  display: block;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 0 10px var(--theme-white);
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.valuesActive {
+  max-height: 100px;
+  border: 1px solid var(--theme-white);
+  border-top: none;
+}
+
+.valueBox {
+  background-color: var(--theme-raisin-black);
+  border-bottom: 1px solid var(--theme-white);
+  transition: all 0.2s ease-out;
+}
+
+.valueBox:last-child {
+  border-bottom: none;
+}
+
+.valueBoxActive {
+  background-color: var(--theme-white);
+}
+
+.input {
+  display: none;
+}
+
+.value {
+  cursor: pointer;
+  display: block;
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease-out;
+  padding: 8px;
+}
+
+.valueBoxActive .value {
+  color: var(--theme-raisin-black);
+}
+
+@media screen and (min-width: 1280px) {
+  .valueBox:hover {
+    background-color: var(--theme-white);
+  }
+
+  .valueBox:hover .value {
+    color: var(--theme-raisin-black);
+  }
+}

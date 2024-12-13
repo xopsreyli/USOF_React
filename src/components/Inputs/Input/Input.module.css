@@ -1,0 +1,51 @@
+.box {
+  position: relative;
+  padding: 16px 0;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--theme-white-op80);
+  outline: none;
+  font-size: 1rem;
+  transition: border-bottom-color 0.15s ease;
+}
+
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--theme-white) !important;
+}
+
+.input:focus {
+  border-bottom-color: var(--theme-white);
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-transform: capitalize;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.input:focus ~ .label,
+.activeLabel {
+  font-size: 0.8rem;
+  top: 2px;
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 1280px) {
+  .box:hover .input {
+    border-bottom-color: var(--theme-white);
+  }
+}

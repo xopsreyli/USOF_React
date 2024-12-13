@@ -1,0 +1,20 @@
+.box {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.code {
+  color: var(--primary);
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+.text {
+  color: var(--theme-white);
+  font-size: 1.5rem;
+}

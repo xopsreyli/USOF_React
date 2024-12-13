@@ -1,0 +1,27 @@
+.info {
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.description {
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+  padding: 0 20px;
+}
+
+.numberOfPosts {
+  color: var(--primary);
+}

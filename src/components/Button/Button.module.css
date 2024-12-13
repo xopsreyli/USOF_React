@@ -1,0 +1,47 @@
+.btn {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  background: transparent;
+  box-shadow: 0 0 0 var(--secondary);
+  overflow: hidden;
+  transition: box-shadow 0.25s ease-out;
+  padding: 13px 0;
+}
+
+.btn:active {
+  color: var(--white-op50);
+}
+
+.btn::before {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 200%;
+  background: var(--btn-bg);
+  transition: top 0.75s ease-out;
+  z-index: -1;
+}
+
+@media screen and (min-width: 1280px) {
+  .btn:hover {
+    box-shadow: 0 4px 4px var(--secondary);
+  }
+
+  .btn:active {
+    box-shadow: none;
+  }
+
+  .btn:hover::before {
+    top: 0;
+  }
+}

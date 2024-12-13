@@ -1,0 +1,127 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  border-bottom: 1px solid var(--theme-white-op80);
+  padding-bottom: 20px;
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.avatarBox {
+  width: 128px;
+  aspect-ratio: 1;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 6px;
+}
+
+.fullName {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.login,
+.roleBox,
+.role,
+.rating {
+  color: var(--theme-white-op80);
+}
+
+.role::before {
+  content: '[';
+  margin-right: 4px;
+}
+
+.role::after{
+  content: ']';
+  margin-left: 4px;
+}
+
+.role::before,
+.role::after {
+  color: var(--theme-white);
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 6px;
+  transition: all 0.2s linear;
+  padding: 8px 16px;
+}
+
+.editSVG {
+  width: 18px;
+}
+
+.editSVG path {
+  stroke: var(--theme-white-op80);
+  transition: stroke 0.2s linear;
+}
+
+.editText {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+  transition: color 0.2s linear;
+}
+
+.nav {
+  display: flex;
+  gap: 2px;
+  padding: 0 20px;
+}
+
+.link {
+  border-radius: 2px;
+  background-color: var(--theme-white-op80);
+  color: var(--theme-raisin-black);
+  padding: 8px;
+}
+
+.activeLink {
+  background-color: var(--primary);
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1280px) {
+  .edit:hover {
+    border-color: var(--primary);
+    box-shadow: 0 0 4px var(--primary);
+  }
+
+  .edit:hover .editSVG path {
+    stroke: var(--primary);
+  }
+
+  .edit:hover .editText {
+    color: var(--theme-white);
+  }
+}

@@ -1,0 +1,74 @@
+:root {
+  --theme-raisin-black: var(--raisin-black);
+  --theme-white: var(--white);
+  --theme-white-op80: var(--white-op80);
+  --theme-white-op50: var(--white-op50);
+
+  --primary: var(--forest-green);
+  --secondary: var(--green-yellow);
+
+  --btn-bg: linear-gradient(
+      var(--primary) 0 75%,
+      var(--secondary)
+  );
+
+  --theme-toggler-background: var(--white-op50);
+
+  --theme-post-card-categoty-background: var(--granite-grey);
+
+  --theme-category-card-background: var(--chinese-black);
+
+  --leaderboard-card-fade: linear-gradient(
+      to right,
+      transparent 40%,
+      var(--theme-white)
+  );
+}
+
+:root[data-theme="light"] {
+  --theme-raisin-black: var(--white);
+  --theme-white: var(--raisin-black);
+  --theme-white-op80: var(--raisin-black-op80);
+  --theme-white-op50: var(--raisin-black-op50);
+
+  --theme-toggler-background: var(--black-op50);
+
+  --theme-post-card-categoty-background: var(--spanish-grey);
+
+  --theme-category-card-background: var(--bright-gray);
+}
+
+:root[color-schema="red"] {
+  --primary: var(--vivid-auburn);
+  --secondary: var(--congo-pink);
+}
+
+:root[color-schema="orange"] {
+  --primary: var(--dark-orange);
+  --secondary: var(--gold);
+}
+
+:root[color-schema="yellow"] {
+  --primary: var(--gold);
+  --secondary: var(--canary);
+}
+
+:root[color-schema="lightblue"] {
+  --primary: var(--capri);
+  --secondary: var(--light-blue);
+}
+
+:root[color-schema="blue"] {
+  --primary: var(--royal-blue);
+  --secondary: var(--light-sky-blue);
+}
+
+:root[color-schema="purple"] {
+  --primary: var(--blue-violet);
+  --secondary: var(--lavender-magenta);
+}
+
+:root[color-schema="pink"] {
+  --primary: var(--hot-pink);
+  --secondary: var(--light-pink);
+}

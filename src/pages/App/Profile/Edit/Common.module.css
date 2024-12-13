@@ -1,0 +1,22 @@
+.inputBox {
+  width: 100%;
+  max-width: 280px;
+}
+
+.result {
+  font-size: 0.875rem;
+}
+
+.success {
+  color: var(--electric-green);
+}
+
+.error {
+  color: var(--crimson);
+}
+
+.btnBox {
+  width: 100%;
+  max-width: 200px;
+  margin-top: 40px;
+}

@@ -1,0 +1,21 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  text-transform: capitalize;
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+}
+
+.input {
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--theme-white);
+  border-radius: 6px;
+  background-color: var(--theme-raisin-black);
+  color: var(--theme-white);
+  padding: 8px;
+}

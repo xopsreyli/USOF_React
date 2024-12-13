@@ -1,0 +1,48 @@
+@font-face {
+  font-family: OpenSans;
+  src: url('/fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url('/fonts/OpenSans/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+* {
+  color: var(--theme-white);
+  font-family: OpenSans, sans-serif;
+  line-height: 1;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--theme-raisin-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-white);
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid var(--theme-white);
+  border-radius: 6px;
+  background: var(--theme-raisin-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

@@ -1,0 +1,130 @@
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.titleSVG {
+  width: 40px;
+  fill: var(--theme-white);
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 21px;
+  overflow: hidden;
+  padding: 4px 20px;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--leaderboard-card-fade);
+  z-index: -1;
+}
+
+.gold {
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+}
+
+.silver {
+  background-color: var(--silver);
+  border: 1px solid var(--silver);
+  box-shadow: 0 0 8px var(--silver);
+}
+
+.bronze {
+  background-color: var(--bronze);
+  border: 1px solid var(--bronze);
+  box-shadow: 0 0 8px var(--bronze);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--theme-raisin-black);
+  font-size: 1.25rem;
+}
+
+.gold .place {
+  color: var(--gold);
+}
+
+.silver .place {
+  color: var(--silver);
+}
+
+.bronze .place {
+  color: var(--bronze);
+}
+
+.gold .place,
+.silver .place,
+.bronze .place {
+  font-weight: 700;
+}
+
+.avatarBox {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 4px var(--theme-raisin-black);
+  overflow: hidden;
+}
+
+.login {
+  transition: color 0.2s linear;
+}
+
+.login,
+.rating {
+  font-weight: 700;
+  text-shadow: 0 0 4px var(--theme-raisin-black);
+}
+
+.rating {
+  color: var(--theme-raisin-black);
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .card:hover .login {
+    color: var(--primary);
+  }
+}

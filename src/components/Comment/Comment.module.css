@@ -1,0 +1,67 @@
+.comment {
+  border: 1px solid var(--theme-white-op80);
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.commentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--theme-white-op80);
+  padding-bottom: 8px;
+}
+
+.commentAuthor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.commentAuthorAvatar {
+  width: 32px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.commentDate {
+  color: var(--theme-white-op80);
+  font-size: 0.875rem;
+}
+
+.commentContent {
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  padding: 8px 0;
+}
+
+.commentFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--theme-white-op80);
+  padding-top: 8px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.deleteSVG {
+  width: 40px;
+}
+
+.deleteSVG path {
+  stroke: var(--royal-red);
+  transition: all 0.2s ease-out;
+}
+
+@media screen and (min-width: 1280px) {
+  .deleteSVG:hover path {
+    filter: drop-shadow(0 0 1px var(--crimson));
+  }
+}

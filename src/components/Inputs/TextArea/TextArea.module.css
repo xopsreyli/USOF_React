@@ -1,0 +1,28 @@
+.textarea {
+  resize: vertical;
+  background-color: var(--theme-raisin-black);
+  outline: none;
+  border: 2px solid var(--theme-white-op80);
+  border-radius: 6px;
+  box-shadow: 0 0 6px var(--theme-white);
+  color: var(--theme-white-op80);
+  font-size: 1rem;
+  line-height: 1.4rem;
+  transition: all 0.2s ease-out;
+  padding: 6px;
+}
+
+.textarea:focus {
+  border-color: var(--theme-white);
+  box-shadow: none;
+}
+
+.textarea::placeholder {
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 1280px) {
+  .textarea:hover {
+    box-shadow: none;
+  }
+}
